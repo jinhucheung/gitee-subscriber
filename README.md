@@ -1,15 +1,15 @@
 # Gitee Subscriber
 
-This repository is subscribed [Gitee](https://gitee.com) webhook for generating merged pull request logs
+This repository is subscribed [Gitee](https://gitee.com) webhook for generating merged pull request logs by [sinatra](http://sinatrarb.com/)
 
 ## Installation
 
 Clone this repository:
 
 ```
-git clone git@gitee.com:JHuZhang/gitee-subscriber.git
+$ git clone git@gitee.com:JHuZhang/gitee-subscriber.git
 
-cd gitee-subscriber
+$ cd gitee-subscriber
 ```
 
 And then execute:
@@ -21,15 +21,17 @@ $ bundle install
 Now create databate and migrate:
 
 ```
-bundle exec rake rake db:create
-bundle exec rake db:migrate
+$ bundle exec rake rake db:create
+$ bundle exec rake db:migrate
 ```
 
-Start to sever:
+Start to run app:
 
 ```
-puma
+$ puma
 ```
+
+Visit `http://localhost:9292/logs?access_token=ll6_y0Xbj9cV_g`
 
 And that's it, you're all set :)
 

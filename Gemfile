@@ -6,7 +6,6 @@ gem 'rack-contrib'
 
 gem 'puma'
 
-gem 'sqlite3'
 gem 'sinatra-activerecord'
 gem 'activesupport'
 
@@ -15,6 +14,11 @@ gem 'nokogiri'
 
 gem 'rake'
 
-group :development do
+group :development, :test do
+  gem 'sqlite3'
   gem 'byebug'
+end
+
+group :production do
+  gem 'mysql2'
 end

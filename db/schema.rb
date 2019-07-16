@@ -14,19 +14,19 @@
 ActiveRecord::Schema.define(version: 20190715061420) do
 
   create_table "logs", force: :cascade do |t|
-    t.integer  "ident"
-    t.string   "url"
-    t.string   "title"
-    t.string   "type"
-    t.text     "summary"
-    t.string   "author_url"
-    t.string   "author_name"
-    t.string   "actor_url"
-    t.string   "actor_name"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "ident",       limit: 4
+    t.string   "url",         limit: 255
+    t.string   "title",       limit: 255
+    t.string   "type",        limit: 255
+    t.text     "summary",     limit: 65535
+    t.string   "author_url",  limit: 255
+    t.string   "author_name", limit: 255
+    t.string   "actor_url",   limit: 255
+    t.string   "actor_name",  limit: 255
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
-  add_index "logs", ["created_at"], name: "index_logs_on_created_at"
+  add_index "logs", ["created_at"], name: "index_logs_on_created_at", using: :btree
 
 end

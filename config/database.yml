@@ -13,4 +13,8 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  adapter: mysql2
+  encoding: utf8mb4
+  database: gitee_subscriber_production
+  username: root
+  password: <%= ENV['GITEE_SUBSCRIBER_DATABASE_PASSWORD'] %>
