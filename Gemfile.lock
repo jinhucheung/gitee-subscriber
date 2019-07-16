@@ -36,6 +36,7 @@ GEM
       rack
     rack-test (0.7.0)
       rack (>= 1.0, < 3)
+    rake (12.3.2)
     ruby-enum (0.7.2)
       i18n
     sinatra (1.4.8)
@@ -69,6 +70,7 @@ DEPENDENCIES
   nokogiri
   puma
   rack-contrib
+  rake
   sinatra
   sinatra-activerecord
   sinatra-contrib
