@@ -15,8 +15,9 @@ gem 'nokogiri'
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
+  gem 'rake'
 end
 
 group :production do
-  gem 'postgresql'
+  gem 'pg', '~> 0.20.0'
 end
