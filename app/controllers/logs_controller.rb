@@ -56,7 +56,7 @@ class LogsController < ApplicationController
   end
 
   get '/' do
-    cookies[:access_token] = settings.access_token
+    response.set_cookie(:access_token, value: settings.access_token, expires: 20.years.since) if cookies[:access_token].blank?
 
     @logs = 'yesterday' == params[:scope] ? Log.yesterday : Log.today
     @logs = @logs.recent
