@@ -8,7 +8,6 @@ Clone this repository:
 
 ```
 $ git clone git@gitee.com:JHuZhang/gitee-subscriber.git
-
 $ cd gitee-subscriber
 ```
 
