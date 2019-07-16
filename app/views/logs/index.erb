@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="gitee-subscriber">
+  <head>
+    <meta charset="utf-8">
+    <title>Gitee 订阅日志</title>
+    <link rel="stylesheet" href="/assets/logs.min.css">
+    <link rel="stylesheet" href="/assets/github-markdown.min.css">
+    <script src="/assets/timeago.min.js"></script>
+  </head>
+  <body class="gitee-subscriber__logs">
+    <div class="gitee-subscriber__logs-header">
+      <div class="title">
+        Pull Request 更新日志
+      </div>
+      <div class="action">
+        <div class="gitee-subscriber__select">
+          <select onChange="window.location.href = this.value">
+            <option value="/logs" <%= 'selected' if 'yesterday' != params[:scope] %>>今天</option>
+            <option value="/logs?scope=yesterday" <%= 'selected' if 'yesterday' == params[:scope] %>>昨天</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="gitee-subscriber__logs-content">
+      <% if @logs.present? %>
+        <% has_not_old_log = true %>
+        <div class="gitee-subscriber__log-list">
+          <% @logs.each do |log| %>
+            <% if has_not_old_log && log.created_at < 4.hours.ago %>
+              <% has_not_old_log = false %>
+              <div class="gitee-subscriber_log-tips">4 小时之前的日志</div>
+            <% end %>
+            <div class="gitee-subscriber__log">
+              <div class="gitee-subscriber__log-header">
+                <div class="log-title">
+                  <span class="log-title__ident">!<%= log.ident %></span>
+
+                  <a class="log-title__link" href="<%= log.url %>"><%= log.title %></a>
+                </div>
+
+                <div class="log-metas text-muted">
+                  <a href="<%= log.author_url %>" class="log-metas__author"><%= log.author_name %></a>
+                  <span class="log-metas__action">
+                    最后由
+                    <a href="<%= log.actor_url %>" class="log-metas__actor"><%= log.actor_name %></a>
+                    合并于
+                    <span class="log-metas__time" datetime="<%= log.created_at %>"></span>
+                  </span>
+                </div>
+              </div>
+
+              <% if log.summary.present? %>
+                <div class="gitee-subscriber__log-body markdown-body">
+                  <%= log.summary %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      <% else %>
+        <div class="gitee-subscriber__nothings">
+          没有任何日志
+        </div>
+      <% end %>
+    </div>
+
+    <script>
+      window.addEventListener('DOMContentLoaded', function () {
+        var nodes = document.querySelectorAll('.log-metas__time')
+
+        timeago.render(nodes, 'zh_CN')
+      })
+    </script>
+  </body>
+</html>

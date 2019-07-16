@@ -1,0 +1,10 @@
+default: &default
+  access_token: ll6_y0Xbj9cV_g
+  pull_request_deploy_tokens: ['更新', '部署', '上线', '上線', 'Deploy']
+development:
+  <<: *default
+test:
+  <<: *default
+production:
+  <<: *default
+  access_token: <%= ENV['GITEE_SUBSCRIBER_ACCESS_TOKEN'] %>

@@ -1,0 +1,78 @@
+GEM
+  remote: https://gems.ruby-china.com/
+  specs:
+    activemodel (4.2.11.1)
+      activesupport (= 4.2.11.1)
+      builder (~> 3.1)
+    activerecord (4.2.11.1)
+      activemodel (= 4.2.11.1)
+      activesupport (= 4.2.11.1)
+      arel (~> 6.0)
+    activesupport (4.2.11.1)
+      i18n (~> 0.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.3, >= 0.3.4)
+      tzinfo (~> 1.1)
+    arel (6.0.4)
+    backports (3.15.0)
+    builder (3.2.3)
+    byebug (9.0.6)
+    commonmarker (0.20.1)
+      ruby-enum (~> 0.5)
+    concurrent-ruby (1.1.5)
+    i18n (0.9.5)
+      concurrent-ruby (~> 1.0)
+    mini_portile2 (2.4.0)
+    minitest (5.11.3)
+    multi_json (1.13.1)
+    nokogiri (1.9.1)
+      mini_portile2 (~> 2.4.0)
+    puma (3.11.4)
+    rack (1.6.11)
+    rack-contrib (1.8.0)
+      rack (~> 1.4)
+    rack-protection (1.5.5)
+      rack
+    rack-test (0.7.0)
+      rack (>= 1.0, < 3)
+    rake (12.3.2)
+    ruby-enum (0.7.2)
+      i18n
+    sinatra (1.4.8)
+      rack (~> 1.5)
+      rack-protection (~> 1.4)
+      tilt (>= 1.3, < 3)
+    sinatra-activerecord (2.0.13)
+      activerecord (>= 3.2)
+      sinatra (>= 1.0)
+    sinatra-contrib (1.4.7)
+      backports (>= 2.0)
+      multi_json
+      rack-protection
+      rack-test
+      sinatra (~> 1.4.0)
+      tilt (>= 1.3, < 3)
+    sqlite3 (1.3.13)
+    thread_safe (0.3.6)
+    tilt (2.0.9)
+    tzinfo (1.2.5)
+      thread_safe (~> 0.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  activesupport
+  byebug
+  commonmarker
+  nokogiri
+  puma
+  rack-contrib
+  rake
+  sinatra
+  sinatra-activerecord
+  sinatra-contrib
+  sqlite3
+
+BUNDLED WITH
+   1.17.1

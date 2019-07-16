@@ -1,0 +1,98 @@
+.gitee-subscriber__logs {
+  font-size: 16px;
+  height: 100%;
+  width: 43%;
+  padding: 1em;
+}
+
+.gitee-subscriber__logs a {
+  text-decoration: none;
+  color: #222;
+}
+
+.gitee-subscriber__logs a:hover {
+  color: #646464;
+}
+
+.gitee-subscriber__logs .text-muted {
+  color: #ADAAA8;
+}
+
+.gitee-subscriber__logs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .8em;
+}
+
+.gitee-subscriber__logs-header .title {
+  font-weight: 600;
+  font-size: 1.4em;
+
+}
+
+.gitee-subscriber__select {
+  position: relative;
+  border: 1px solid #ccc;
+  width: 7em;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fafafa;
+}
+
+.gitee-subscriber__select::after {
+  content: '\25BC';
+  position: absolute;
+  top: .8em;
+  right: .7em;
+  color: #7D8695;
+  font-size: .6em;
+}
+
+.gitee-subscriber__select select {
+  padding: 5px 8px;
+  width: 130%;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+.gitee-subscriber__select select:focus {
+  outline: none;
+}
+
+.gitee-subscriber__log:not(:last-child) {
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.gitee-subscriber_log-tips {
+  color: #ADAAA8;
+  font-size: 1em;
+  display: flex;
+  justify-content: center;
+  margin: 3.5em 0;
+}
+
+.gitee-subscriber__log-header .log-title {
+  margin-bottom: .5em;
+  word-break: break-word;
+}
+
+.gitee-subscriber__log-header .log-title__ident {
+  margin-right: .3em;
+}
+
+.gitee-subscriber__log-header .log-metas {
+  font-size: .85em;
+}
+
+.gitee-subscriber__log-header .log-metas__author {
+  margin-right: .1em;
+}
+
+.gitee-subscriber__log-body {
+  margin-top: 1em;
+}
+
