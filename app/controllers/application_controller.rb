@@ -19,4 +19,8 @@ class ApplicationController < Sinatra::Base
   config_file File.join(settings.root, 'config/config.yml.erb')
 
   helpers Sinatra::Cookies
+
+  before do
+    Time.zone = 'Asia/Hong_Kong'.freeze
+  end
 end
