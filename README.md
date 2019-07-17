@@ -20,7 +20,7 @@ $ bundle install
 Now create databate and migrate:
 
 ```
-$ bundle exec rake rake db:create
+$ bundle exec rake db:create
 $ bundle exec rake db:migrate
 ```
 
