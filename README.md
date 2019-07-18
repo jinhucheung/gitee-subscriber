@@ -7,7 +7,7 @@ This repository is subscribed [Gitee](https://gitee.com) webhook for generating 
 Clone this repository:
 
 ```
-$ git clone git@gitee.com:JHuZhang/gitee-subscriber.git
+$ git clone git@gitee.com:jimcheung/gitee-subscriber.git
 $ cd gitee-subscriber
 ```
 
